@@ -15,8 +15,7 @@ pipeline{
     stage('build and test'){
       steps{
         sh ''' 
-        mvn clean package -Dmaven.repo.local=~/.m2/repository
-         mvn clean package
+        mvn clean package -Dmaven.repo.local=/tmp/maven-repo
         '''
       }
     }
