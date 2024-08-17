@@ -19,5 +19,13 @@ pipeline{
         '''
       }
     }
+    stage('static analysis'){
+      steps{
+        withCredentials([string(credentialsId: 'sonaraaaaaaaaaa', variable: 'SONAR-TOKEN')]) {
+    // some block
+          sh '''
+          
+          '''
+        }
   }
 }
