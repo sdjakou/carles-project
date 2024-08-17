@@ -15,6 +15,8 @@ pipeline{
     stage('build and test'){
       steps{
         sh ''' 
+        sudo chmod -R 755 /home/automation/.m2/repository
+        sudo chown -R automation:automation /home/automation/.m2/repository
         mvn clean package
         '''
       }
