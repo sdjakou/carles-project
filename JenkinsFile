@@ -1,9 +1,22 @@
 pipeline{
   agent any
+
+  tools {
+    maven 'Mvn'
+  }
+
   stages{
     stage ('scm'){
       steps{
         git branch: 'main', url: 'https://github.com/Angecalais97/carles-project'
+      }
+    }
+
+    stage('build and test'){
+      steps{
+        sh ''' 
+        mvn clean package
+        '''
       }
     }
   }
