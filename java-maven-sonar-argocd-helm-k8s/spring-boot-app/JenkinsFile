@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage ('scm'){
       steps{
-        git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Angecalais97/carles-project'
+        git branch: 'main', url: 'https://github.com/Angecalais97/carles-project'
       }
     }
   }
