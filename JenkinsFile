@@ -1,1 +1,8 @@
-
+pipeline {
+  agent any
+  stages {
+    steps {
+      echo "cloning the repo"
+      git branch: git 'https://github.com/sdjakou/carles-project'
+  }
+}
